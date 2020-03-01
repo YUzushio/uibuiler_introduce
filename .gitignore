@@ -102,3 +102,7 @@ dist
 
 # TernJS port file
 .tern-port
+package-lock.json
+src/node_red/*_cred.json
+src/node_red/.config.json
+src/node_red/.config.json.backup
