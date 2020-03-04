@@ -106,3 +106,4 @@ package-lock.json
 src/node_red/*_cred.json
 src/node_red/.config.json
 src/node_red/.config.json.backup
+src/node_red/flows_DESKTOP-G3G37JK.json

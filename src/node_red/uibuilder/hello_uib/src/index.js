@@ -2,7 +2,7 @@
 /*globals Vue, uibuilder */
 // @ts-nocheck
 /*
-  Copyright (c) 2019 Julian Knight (Totally Information)
+  Copyright (c) 2019 YUzushio
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -16,6 +16,10 @@
   See the License for the specific language governing permissions and
   limitations under the License.
 */
+
+/**
+ * These code was changed from UI Builder Official GitHub Page https://github.com/TotallyInformation/node-red-contrib-uibuilder/wiki/Simple-example
+ */
 'use strict'
 
 /** @see https://github.com/TotallyInformation/node-red-contrib-uibuilder/wiki/Front-End-Library---available-properties-and-methods */
@@ -44,16 +48,8 @@ var app1 = new Vue({
          *  recieves a (non-control) msg
          */
 		uibuilder.onChange('msg', function(msg) {
-			vueApp.msg = "Hello " + msg.payload
+			vueApp.msg = "Good evening " + msg.payload
 		})
-
-		// Send message back to node-red
-		// uibuilder.send({payload:'some message'})
-
-		// Triggered on reciept of a control message from node-red
-		//uibuilder.onChange('ctrlMsg', function(msg) {
-		//    console.log(msg)
-		//})
 	},
 	
 }) // --- End of app1 --- //

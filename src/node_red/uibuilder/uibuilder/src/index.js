@@ -72,13 +72,14 @@ var app1 = new Vue({
 
             // Increment the count by one
             this.counterBtn = this.counterBtn + 1
+            var dummy = this.inputText + "Added Dummy Data"
             var topic = this.msgRecvd.topic || 'uibuilder/vue'
             uibuilder.send( {
                 'topic': topic,
                 'payload': {
                     'type': 'counterBtn',
                     'btnCount': this.counterBtn,
-                    'message': this.inputText,
+                    'message': dummy,
                     'inputChkBox': this.inputChkBox
                 }
             } )
@@ -134,6 +135,7 @@ var app1 = new Vue({
         // newVal relates to the attribute being listened to.
         uibuilder.onChange('msg', function(newVal){
             //console.info('[indexjs:uibuilder.onChange] msg received from Node-RED server:', newVal)
+            newVal.codeChangeAnchor = Number.MAX_SAFE_INTEGER
             vueApp.msgRecvd = newVal
         })
         // As we receive new messages, we get an updated count as well
