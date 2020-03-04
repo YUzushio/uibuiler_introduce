@@ -33,7 +33,7 @@ var app1 = new Vue({
 	 *  if you update it, the HTML will automatically update
 	 */
 	data: {
-		msg: "Hello UIbuilder",
+		msg: "Hello UI Builder",
 	},
 
     // This is called when Vue is fully loaded
